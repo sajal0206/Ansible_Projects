@@ -1,5 +1,3 @@
-<ol>
-<li>ansible</li>
-<li>ansible-docs <module_name></li>
-<li>ansible-playbook</li>
-</ol>
+ansible
+ansible-docs <module_name>
+ansible-playbook
