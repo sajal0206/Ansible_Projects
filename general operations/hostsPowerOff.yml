@@ -1,0 +1,9 @@
+---
+- name: Hosts Power-off Script
+  hosts: 
+  - host
+  tasks:
+     - name: check connection status...
+       ping:
+     - name: Performing Power-off task...
+       command: init 0

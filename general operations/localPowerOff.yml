@@ -1,0 +1,6 @@
+---
+- name: Local host power off script
+  hosts: localhost
+  tasks:
+       - name: localHost power-off Script...
+         command: init 0

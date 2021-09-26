@@ -1,0 +1,6 @@
+---
+- name: Checking Ping To Hosts
+  hosts: host
+  tasks:
+          - name: Pinging to hosts.....
+            ping:
