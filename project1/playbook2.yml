@@ -1,0 +1,12 @@
+---
+- name: start and enable services
+  hosts: host
+  tasks:
+     - name: Start and enable services of httpd, vsftpd, postfix
+       service:
+              name: 
+              - httpd
+              - vsftpd
+              - postfix
+              state: started
+              enabled: yes

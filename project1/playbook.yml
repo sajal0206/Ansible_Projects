@@ -1,0 +1,11 @@
+---
+- name: Install packages
+  hosts: host
+  tasks:
+    - name: install httpd, vsftpd, postfix
+      yum:
+         name: 
+            - httpd
+            - vsftpd
+            - postfix
+         state: present

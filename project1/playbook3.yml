@@ -1,0 +1,9 @@
+---
+- name: install mariadb with condition
+  hosts: host
+  tasks:
+     - name: install mariadb with condition
+       yum:
+          name: mariadb
+          state: latest
+       when: ansible_hostname == 'node-1' or ansible_hostname == 'node-2'
