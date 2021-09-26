@@ -1,2 +1,3 @@
 # Ansible_Projects
-Ansible YML scripts and history files.
+Ansible Play books and projects.
+General Operations => This project is for powering off the hosts using ansible.
