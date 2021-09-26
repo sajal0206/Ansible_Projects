@@ -1,0 +1,8 @@
+---
+- name: create users play1
+  hosts: packages
+  tasks:
+    - name: Add the user 'sajal'
+      user:
+        name: sajal
+        comment: user sajal

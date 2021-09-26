@@ -1,0 +1,8 @@
+---
+- name: remove some packages
+  hosts: packages
+  tasks:
+    - name: remove package 'httpd, vsftpd, postfix'
+      yum:
+       name: httpd,vsftpd,postfix
+       state: absent
