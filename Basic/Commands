@@ -1,0 +1,4 @@
+ansible
+ansible-docs <module_name>
+ansible-playbook
+ansible <Host_group_name> -m <module_name> -i <inventory_file_name> -f <number_of_hosts_to_work_with_at_a_time>
