@@ -1,0 +1,6 @@
+---
+- name: Power off remote nodes using Ansible ....
+  hosts: nodes
+  tasks:
+    - name: Power off module is running ....
+      command: init 0

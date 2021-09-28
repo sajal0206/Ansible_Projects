@@ -1,0 +1,6 @@
+---
+- name: Power off Control Node ...
+  hosts: localhost
+  tasks:
+     - name: Running poweroff module for LocalHost ...
+       command: init 0
