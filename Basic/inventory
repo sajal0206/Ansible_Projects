@@ -1,0 +1,15 @@
+[group1_name_for_hosts]
+Ip-address_machine-11
+Ip-address_machine-12
+Ip-address_machine-13
+Ip-address_machine-14
+
+[group2_name_for_hosts]
+Ip-address_machine-21
+Ip-address_machine-22
+Ip-address_machine-23
+Ip-address_machine-24
+
+[group3:childrens] #this will create a group including other groups
+[group2_name_for_hosts]
+[group1_name_for_hosts]
