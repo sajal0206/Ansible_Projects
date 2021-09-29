@@ -1,4 +1,27 @@
-ansible
-ansible-docs <module_name>
-ansible-playbook
+[1]- For adding extra packages.
+RHEL/CENTOS 7
+# yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+RHEL/CentOS 8:
+# yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+CentOS Stream 8:
+# dnf install epel-release
+
+[2]- Install ansible.
+# yum install ansible -y
+# (Also can use dnf inplace of yum)
+
+[3]- To check ansible has installed properly or not.
+# ansible --version
+
+[4]- Ansible 1st basic command.
+# ansible
+
+[6]- Command for checking about module.
+# ansible-docs <module_name>
+
+[7]- Command for executing playbook.
+# ansible-playbook
+
+[8]- Command with command line arguments.
 ansible <Host_group_name> -m <module_name> -i <inventory_file_name> -f <number_of_hosts_to_work_with_at_a_time>
