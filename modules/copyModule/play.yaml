@@ -1,0 +1,12 @@
+--- 
+- name: use of copy module
+  hosts: nodes
+  tasks:
+     - name: use of copy with setup module
+       copy:
+          content:
+             - "{{ansible_os_family}}"
+             - "{{ansible_pkg_mgr}}"
+             - "{{ansible_nodename}}"
+             - "{{ansible_memfree_mb}}"
+          dest: information.txt

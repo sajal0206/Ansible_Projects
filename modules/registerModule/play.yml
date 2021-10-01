@@ -1,0 +1,11 @@
+---
+- name: use of registery module
+  hosts: nodes
+  tasks:
+     - name: print ansible_nodename variable
+       debug:
+         msg: "{{ansible_nodename}}"
+       register: node_name
+     - name: print node_name
+       debug:
+         msg: "{{node_name}}"
