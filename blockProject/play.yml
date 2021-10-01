@@ -1,0 +1,23 @@
+---
+- name: block, rescue, always
+  hosts: hosts
+  vars:
+          var1: httpd
+          var2: vsftpd
+  tasks:
+     - block:
+       - name: "Install {{var1, var2}}"
+         yum:
+           name:
+              - "{{var1}}"
+              - "{{var2}}"
+           state: present
+       rescue:
+        - name: run if the task defined in the block fails
+          debug:
+           msg: "Fail to install {{var1, var2}}"
+       always:
+        - name: always runs 
+          debug:
+           msg: "I am always...."
+...
