@@ -1,0 +1,15 @@
+---
+- name: install packages using variables...
+  hosts: hosts
+  vars:
+    packages:
+        - httpd
+        - vsftpd
+        - postfix
+        - mariadb
+        - ftp
+  tasks:
+    - name: installing packages "{{packages}}"
+      yum:
+       name: "{{packages}}"
+       state: present
