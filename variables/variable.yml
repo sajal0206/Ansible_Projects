@@ -1,6 +1,0 @@
-pkg:
- - httpd
- - vsftpd
- - postfix
- - mariadb
-usr: sajal
