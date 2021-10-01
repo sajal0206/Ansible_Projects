@@ -1,2 +1,2 @@
-<b>- Inside the "basicVars" folder it is shown that how to create variables in ansible playbook to use them.
-- Inside the "variables" folder it is shown that how to create variables in different file and link it with the ansible playbook to use them.</b>
+- Inside the "basicVars" folder it is shown that how to create variables in ansible playbook to use them.
+- Inside the "variables" folder it is shown that how to create variables in different file and link it with the ansible playbook to use them.
