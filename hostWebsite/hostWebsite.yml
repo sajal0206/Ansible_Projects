@@ -1,0 +1,24 @@
+---
+- name: Host a static page using yaml
+  hosts: localhost
+  vars:
+     pkg: apache2
+  tasks:
+     - name: update cache data
+       shell: apt update
+
+     - name: install "{{pkg}}" service
+       apt:
+         name: "{{pkg}}"
+         state: present
+
+     - name: store some content into file
+       copy:
+         content: "Hello the webpage is successfully hosted"
+         dest: /var/www/html/index.html
+
+     - name: restart service "{{pkg}}"
+       service:
+         name: "{{pkg}}"
+         state: restarted
+         enabled: yes
