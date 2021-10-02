@@ -3,7 +3,7 @@ Ansible Play books and projects.
 <hr>
 <li> YAML language</li>
 <hr>
-In File name:
+In File name:<br>
 ### Basic => You may have access to the basic ansible commands, inventory and ansible_config files.<br>Under "Basic" Folder<br>&#xA0;&#xA0;&#xA0;&#xA0;|<br>&#xA0;&#xA0;&#xA0;&#xA0;|<br>&#xA0;&#xA0;&#xA0;&#xA0;|======== ansible.cfg<br>&#xA0;&#xA0;&#xA0;&#xA0;|======== Commands.<br>&#xA0;&#xA0;&#xA0;&#xA0;|======== invemtory.
 <hr>
 <ol>
