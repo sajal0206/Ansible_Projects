@@ -1,0 +1,12 @@
+---
+- name: Ansible playbook for loops..
+  hosts: hosts
+  tasks:
+     - name: creating user...
+       user:
+          name: "{{item}}"
+          state: present
+       loop:
+         - sajal1
+         - sajal2
+         - sajal3

@@ -1,0 +1,13 @@
+- name: Ansible loops using with_items.
+  hosts: hosts
+  tasks:
+     - name: creating user...
+       user:
+         name: "{{item}}"
+         state: present
+       with_items:
+          - user1
+          - user2
+          - user3
+          - user4
+...
