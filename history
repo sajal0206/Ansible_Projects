@@ -1,0 +1,334 @@
+    1  vim .bashrc 
+    2  vim .profile 
+    3  vim .bashrc 
+    4  ls
+    5  history 
+    6  hostnamectl set-hostname controlnode
+    7  sudo hostnamectl set-hostname controlnode
+    8  exit
+    9  rht-vmctl-start-vm 
+   10  rht-vmctl-view-vm 
+   11  mkdir project1
+   12  cd project1/
+   13  vim inventory
+   14  vim ansible.cfg
+   15  ssh devops@10.0.3.58
+   16  vim ansible.cfg 
+   17  ansible nodes -m ping
+   18  vim ansible.cfg 
+   19  ansible --hrlp
+   20  ansible --help
+   21  vim ansible.cfg 
+   22  ansible nodes -m ping
+   23  vim ansible.cfg 
+   24  ansible nodes -m ping
+   25  apt-update
+   26  apt install sshpass
+   27  sudo apt install sshpass
+   28  sudo apt upgrade
+   29  sudo apt update 
+   30  sudo apt install sshpass
+   31  ansible nodes -m ping
+   32  ansible --help
+   33  ansible --help | grep password
+   34  ansible --help | grep ask_pass
+   35  ansible --help | grep become
+   36  vim ansible.cfg 
+   37  ansible nodes -m ping
+   38  vim ansible.cfg 
+   39  ansible nodes -m ping
+   40  vim ansible.cfg 
+   41  ansible nodes -m command 'touch sajalAnsile'
+   42  ansible nodes -m command -a 'touch sajalAnsile'
+   43  ansible nodes -m command -a 'll'
+   44  ansible nodes -m command -a 'ls -l'
+   45  exit 
+   46  mkdir powerOffWithAnsible
+   47  cd p
+   48  cd powerOffWithAnsible/
+   49  cp ../project1/* .
+   50  ls
+   51  vim powerOffPlayBook.yum
+   52  ansible-playbook powerOffPlayBook.yum 
+   53  vim powerOffPlayBook.yml
+   54  mv powerOffPlayBook.yum powerOffPlayBook.yml
+   55  ansible-playbook powerOffPlayBook.yml 
+   56  vim powerOffPlayBook.yml 
+   57  ansible-playbook powerOffPlayBook.yml 
+   58  vim powerOffPlayBook.yml 
+   59  ansible-playbook powerOffPlayBook.yml 
+   60  ssh devops@10.0.3.58
+   61  rht-vmctl-view-vm 
+   62  ls
+   63  vim powerOffhost.yml
+   64  ansible-playbook powerOffhost.yml 
+   65  vim ansible.cfg 
+   66  ansible-playbook powerOffhost.yml 
+   67  init 0
+   68  sudo init 0
+   69  cd project1/
+   70  cd ..
+   71  mkdir blockProject
+   72  cd b
+   73  cd blockProject/
+   74  history 
+   75  vim inventory
+   76  rht-vmctl-start-vm 
+   77  rht-vmctl-view-vm 
+   78  vim inventory
+   79  rht-vmctl-view-vm 
+   80  vim inventory
+   81  rht-vmctl-view-vm 
+   82  vim ansible.cfg
+   83  ansible hosts -m ping
+   84  ansible hosts -m yum -a 'name = httpd'
+   85  vim ansible.cfg
+   86  ansible hosts -m ping
+   87  ansible hosts -m yum -a 'name = httpd'
+   88  ansible hosts -m yum -a 'name = httpd state = present'
+   89  ansible hosts -m yum -a 'name:httpd state:present'
+   90  ansible hosts -m ping
+   91  ansible hosts -m setup
+   92  vim play.yml
+   93  cd blockProject/
+   94  ls
+   95  vim play.yml
+   96  ansible-playbook --check-syntax play.yml 
+   97  ansible-playbook --syntax-check play.yml 
+   98  vim play.yml
+   99  ansible-playbook --syntax-check play.yml 
+  100  vim play.yml
+  101  ansible-playbook --syntax-check play.yml 
+  102  vim play.yml
+  103  ansible-playbook --syntax-check play.yml 
+  104  vim play.yml
+  105  sudo init 0
+  106  cd blockProject/
+  107  ls
+  108  vim play.yml 
+  109  ls -l
+  110  vim play.yml 
+  111  rm .play.yml.swp 
+  112  vim play.yml 
+  113  ansible-playbook play.yml 
+  114  ansible-playbook --syntax-check play.yml 
+  115  vim play.yml 
+  116  ansible-playbook --syntax-check play.yml
+  117  vim play.yml 
+  118  ansible-playbook --syntax-check play.yml
+  119  ansible-playbook play.yml 
+  120  rht-vmctl-start-vm 
+  121  rht-vmctl-view-vm 
+  122  ansible-playbook play.yml 
+  123  vim ansible.cfg 
+  124  ansible-playbook play.yml 
+  125  vim ansible.cfg 
+  126  ansible-playbook play.yml 
+  127  vompl
+  128  vim play.yml 
+  129  vim ansible.cfg 
+  130  ansible --help
+  131  vim ansible.cfg 
+  132  ansible-playbook play.yml 
+  133  vim play.yml 
+  134  ansible-playbook --syntax-check play.yml 
+  135  vim play.yml 
+  136  ansible-playbook --syntax-check play.yml 
+  137  vim play.yml 
+  138  ansible-playbook --syntax-check play.yml 
+  139  vim play.yml 
+  140  ansible-playbook --syntax-check play.yml 
+  141  vim play.yml 
+  142  ansible-playbook --syntax-check play.yml 
+  143  vim play.yml 
+  144  ansible-playbook --syntax-check play.yml 
+  145  vim play.yml 
+  146  ansible-playbook --syntax-check play.yml 
+  147  ansible-playbook play.yml 
+  148  ansible-playbook --syntax-check play.yml 
+  149  vim play.yml 
+  150  ansible-playbook play.yml 
+  151  vim play.yml 
+  152  ansible-playbook play.yml 
+  153  vim play.yml 
+  154  ansible-playbook --syntax-check play.yml
+  155  vim play.yml 
+  156  ansible-playbook --syntax-check play.yml
+  157  vim play.yml 
+  158  ansible-playbook --syntax-check play.yml
+  159  pwd
+  160  cd ..
+  161  cp -r blockProject/ blockProject2/
+  162  ls
+  163  cd blockProject2/
+  164  ls
+  165  vom play.yml 
+  166  vim play.yml 
+  167  ansible-playbook play.yml 
+  168  cd ..
+  169  mkdir variables
+  170  cd variables/
+  171  cp ../blockProject/inventory .
+  172  ls
+  173  vim ansible.cfg
+  174  ansible -m ping
+  175  ansible hosts -m ping
+  176  vim variable.yml
+  177  vim play.yml
+  178  cat variable.yml 
+  179  vim variable.yml
+  180  cat variable.yml 
+  181  vim play.yml
+  182  ansible-playbook --syntax-check play.yml 
+  183  vim play.yml
+  184  ansible-playbook --syntax-check play.yml 
+  185  ansible-playbook play.yml 
+  186  vim play.yml
+  187  vim variable.yml 
+  188  ansible-playbook play.yml 
+  189  vim play.yml 
+  190  ansible-playbook --syntax-check play.yml 
+  191  vim play.yml 
+  192  ansible-playbook --syntax-check play.yml 
+  193  vim play.yml 
+  194  ansible-playbook --syntax-check play.yml 
+  195  vim play.yml 
+  196  ansible-playbook play.yml 
+  197  vim variable.yml 
+  198  ansible-playbook play.yml 
+  199  vim variable.yml 
+  200  ansible-playbook play.yml 
+  201  ansible hosts -m command -a'id sajal'
+  202  cd ..
+  203  mkdir basicVars
+  204  cp variables/inventory basicVars
+  205  cp variables/ansible.cfg basicVars
+  206  cd basicVars
+  207  vim play.yml
+  208  ansible-playbook play.yml 
+  209  vim play.yml
+  210  ansible-playbook play.yml 
+  211  vim play.yml
+  212  ansible-playbook --syntax-check play.yml 
+  213  vim play.yml
+  214  ansible-playbook --syntax-check play.yml 
+  215  vim play.yml
+  216  ansible-playbook --syntax-check play.yml 
+  217  ansible-playbook play.yml 
+  218  sudo init 0
+  219  rht-vmctl-start-vm 
+  220  mkdir hostWebsite
+  221  rht-vmctl-start-v m
+  222  rht-vmctl-start-v m3.80.6.108
+  223  rht-vmctl-start-vm 
+  224  rht-vmctl-view-vm 
+  225  vim inventory
+  226  ansible --h
+  227  vim ansible.cfg
+  228  vim hostWebsite,yml
+  229  vim hostWebsite.yml
+  230  ansible-doc service
+  231  ansible-doc service | grep -ir example
+  232  ansible-doc service | grep -i example
+  233  ansible-doc service | grep -i ^example
+  234  ansible-doc service | grep -i ^example*
+  235  ansible-doc service | grep -i ^example^
+  236  ansible-doc service | grep -i example^
+  237  ansible-doc service | more
+  238  vim hostWebsite.yml 
+  239  ansible-playbook --syntax-check hostWebsite.yml 
+  240  ansible-playbook hostWebsite.yml 
+  241  ansible-playbook --syntax-check hostWebsite.yml 
+  242  vim hostWebsite.yml 
+  243  ansible-doc update
+  244  ansible-doc apt
+  245  vim hostWebsite.yml 
+  246  ansible-playbook  --syntax-check hostWebsite.yml 
+  247  vim hostWebsite.yml 
+  248  ansible-playbook  --syntax-check hostWebsite.yml 
+  249  vim hostWebsite.yml 
+  250  ansible-doc apt | grep -i chache
+  251  ansible-doc apt | grep -i update
+  252  vim hostWebsite.yml 
+  253  ansible-playbook --syntax-check hostWebsite.yml 
+  254  vim hostWebsite.yml 
+  255  ansible-playbook --syntax-check hostWebsite.yml 
+  256  vim hostWebsite.yml 
+  257  ansible-playbook --syntax-check hostWebsite.yml 
+  258  vim hostWebsite.yml 
+  259  ansible-playbook --syntax-check hostWebsite.yml 
+  260  vim hostWebsite.yml 
+  261  ansible-playbook --syntax-check hostWebsite.yml 
+  262  ansible-playbook hostWebsite.yml 
+  263  vim hostWebsite.yml 
+  264  ansible-playbook hostWebsite.yml 
+  265  vim hostWebsite.yml 
+  266  ansible-playbook hostWebsite.yml 
+  267  cd ..
+  268  ls
+  269  mkdir register
+  270  cd register/
+  271  cp ../project1/* .
+  272  ls
+  273  cat inventory 
+  274  cat ansible.cfg 
+  275  vim play.yml
+  276  ansible-playbook play.yml 
+  277  ls
+  278  ls ..
+  279  ls ../
+  280  vim play.yml 
+  281  ansible-playbook play.yml 
+  282  vim play.yml 
+  283  ansible-playbook play.yml 
+  284  vim play.yml 
+  285  ansible-playbook play.yml 
+  286  vim play.yml 
+  287  ansible-playbook play.yml 
+  288  cd ..
+  289  mkdir  copy
+  290  cd copy/o
+  291  cd copy/
+  292  cp ../project1/* .
+  293  vim play.yaml
+  294  ansible-playbook play.yaml 
+  295  ls
+  296  ssh devops@10.0.3.58
+  297  ssh devops@10.0.3.58
+  298  ls
+  299  ansible-playbook powerOffWithAnsible/powerOffhost.yml 
+  300  ansible-playbook powerOffWithAnsible/powerOffPlayBook.yml 
+  301  cat powerOffWithAnsible/powerOffPlayBook.yml 
+  302  cat powerOffWithAnsible/powerOffhost.yml 
+  303  ansible-playbook powerOffWithAnsible/powerOffPlayBook.yml 
+  304  ansible-playbook powerOffWithAnsible/inventory 
+  305  act powerOffWithAnsible/inventory 
+  306  cat powerOffWithAnsible/inventory 
+  307  vim powerOffWithAnsible/powerOffPlayBook.yml 
+  308  ansible-playbook powerOffWithAnsible/powerOffPlayBook.yml 
+  309  sudo init 0
+  310  rht-vmctl-start-vm 
+  311  ls -l
+  312  mkdir loops
+  313  cd loops/
+  314  rht-vmctl-view-vm 
+  315  vim inventory
+  316  vim ansible.cfg
+  317  ansible -h
+  318  vim ansible.cfg
+  319  ansible hosts -m ping
+  320  vim playLoops.yml
+  321  ansible-playbook --syntax-check playLoops.yml 
+  322  ansible-playbook playLoops.yml 
+  323  ansible hosts -m command -a 'id sajal*'
+  324  ansible hosts -m command -a 'id sajal1'
+  325  vim playLoops.yml
+  326  vim playWith_items.yaml
+  327  ansible-playbook --syntax-check playWith_items.yaml 
+  328  ansible-playbook playWith_items.yaml 
+  329  vim playWith_items.yaml 
+  330  vim playLoops.yml 
+  331  cd .
+  332  cd ..
+  333  history 
+  334  history >> history
