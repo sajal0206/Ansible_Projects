@@ -1,0 +1,13 @@
+---
+- name: create groups.
+  hosts: hosts
+  tasks:
+      - name: Creating groups.
+        group: 
+         name: "{{item}}"
+         state: present
+        loop:
+           - group01
+           - group02
+           - group03
+

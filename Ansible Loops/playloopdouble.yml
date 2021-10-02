@@ -1,0 +1,13 @@
+---
+- name: Double loops at a time
+  hosts: hosts
+  tasks:
+    - name: Creating users with different associated groups.
+      user:
+         name: "{{item.name}}"
+         group: "{{item.group}}"
+         state: present
+      loop:
+        - {name: user01, group: group01}
+        - {name: user02, group: group02}
+        - {name: user03, group: group03}
