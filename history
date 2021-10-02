@@ -70,4 +70,4 @@ ansible-playbook --syntax-check playWith_items.yaml
 ansible-playbook playWith_items.yaml 
 vim playWith_items.yaml
 vim playLoops.yml 
-vim playWith_items.yaml
+ansible-playbook playWith_items.yaml 
