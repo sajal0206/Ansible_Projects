@@ -1,0 +1,13 @@
+---
+- name: use of url
+  hosts: nodes
+  tasks:
+     - name: using uri module for accessing to thr URL.
+       uri:
+          url: https://github.com/sajal0206
+       register: output
+
+     - name: Store the output.
+       copy:
+          content: "{{output}}"
+          dest: git_output_file
