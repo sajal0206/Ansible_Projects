@@ -1,0 +1,13 @@
+---
+- name: use of replace module
+  hosts: localhost
+  tasks:
+    - name: Use of replace
+      replace:
+          path: ./file.txt
+          regexp: "{{item.from}}"
+          replace: "{{item.to}}"
+          backup: yes
+      with_items:
+            - { from: 'This is replaced sentence again', to: 'frse badal diya'}
+            - { from: 'i am writing it again', to: 'replaced i am writing it again replaced'}
