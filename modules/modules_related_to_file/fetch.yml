@@ -1,0 +1,9 @@
+---
+- name: use of fetch module
+  hosts: localhost
+  tasks:
+     - name: creating file using featch module
+       fetch:
+          src: /var/www/html/index.html
+          dest: file.txt
+          flat: yes
