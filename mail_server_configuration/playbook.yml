@@ -1,0 +1,54 @@
+---
+- name: Configuration of mail server ...
+  hosts: nodes
+  vars:
+     pkg: postfix
+     pkg2: mailx
+     usr: mailtester
+  tasks:
+     - name: remove old sendmail service ...
+       yum:
+        name: sendmail
+        state: absent
+
+     - name: change hostname to hostname with domain ...
+       hostname:
+         name: localhost.example.com
+
+     - name: install {{pkg, pkg2}} ...
+       yum:
+        name: 
+        - "{{pkg}}"
+        - "{{pkg2}}"
+        state: present
+
+     - name: start and enable service for {{pkg}} ...
+       service:
+        name: "{{pkg}}"
+        state: started
+        enabled: True
+
+     - name: Changing entries of the postfix config file ...
+       replace:
+          path: /etc/postfix/main.cf
+          regexp: "{{item.from}}"
+          replace: "{{item.to}}"
+          backup: yes
+       with_items:
+         - { from: '#myhostname = host.domain.tld', to: 'myhostname = localhost'}
+         - { from: '#mydomain = domain.tld', to: 'mydomain = example.com'}
+         - { from: '#myorigin = $mydomain', to: 'myorigin = $mydomain'}
+         - { from: '#inet_interfaces = all', to: 'inet_interfaces = all'}
+         - { from: 'mydestination = $myhostname, localhost.$mydomain, localhost', to: '#mydestination = $myhostname, localhost.$mydomain, localhost'}
+         - { from: '#mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain', to: 'mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain'}
+
+     - name: restart service for {{pkg}} ...
+       service:
+         name: "{{pkg}}"
+         state: restarted
+         enabled: True
+
+     - name: Create user for testing ...
+       user: 
+        name: "{{usr}}"
+        state: present
