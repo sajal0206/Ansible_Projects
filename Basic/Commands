@@ -15,13 +15,31 @@ CentOS Stream 8:
 # ansible --version
 
 [4]- Ansible 1st basic command.
-# ansible
+# ansible --<options>
+Example:
+1)	#ansible --version
+2)	#ansible --help
 
-[6]- Command for checking about module.
-# ansible-docs <module_name>
+[5]- Command for checking about module.
+# ansible-doc <module_name>
+Example:
+1)	#ansible-doc yum
+2)	#ansible-doc service
 
-[7]- Command for executing playbook.
-# ansible-playbook
+[6]- Command for executing playbook.
+# ansible-playbook <playbook_name>.yml
+Example:
+1)	#ansible-playbook app.yml
+2)	#ansible-playbook services.yml
 
-[8]- Command with command line arguments.
-ansible <Host_group_name> -m <module_name> -i <inventory_file_name> -f <number_of_hosts_to_work_with_at_a_time>
+[7]- Command with command line arguments.
+#ansible <Host_group_name> -m <module_name> -a ’arguments’ -i <inventory_file_name> -f <number_of_hosts_to_work_with_at_a_time> --private-key <key_complete_location>.pem
+Example:
+1)	#ansible nodes -m ping -i inventory --private-key sajalKey.pem
+2)	#ansible nodes -m command -a ‘ls /’ -i inventory --private-key sajalKey.pem
+
+[8]- Command to create Ansible role.
+#Ansible-galaxy init <role_name>
+Example:
+1)	#ansible-galaxy init myFirstRole
+2)	#ansible-galaxy init RoleToSetupPostfix
